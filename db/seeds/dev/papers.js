@@ -13,7 +13,6 @@ exports.seed = function(knex) {
             "id"
           )
           .then(paper => {
-            console.log(paper);
             return knex("footnotes")
               .insert([
                 { note: "Lorem", paper_id: paper[0] },
